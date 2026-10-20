@@ -1,0 +1,11 @@
+# compiled programs
+*.exe
+*.o
+a.out
+lab-sheet/program1
+lab-sheet/program2
+lab-sheet/program3
+
+# tools
+node_modules/
+.DS_Store

@@ -1,0 +1,104 @@
+Smart Assistive Wheelchair Simulator
+Software simulation only. Not connected to a real wheelchair
+
+1. Add MOVE request
+2. Add BACK request
+3. Add SENSE request
+4. Process next request
+5. Peek front of queue
+6. Peek top of stack
+7. Show queue
+8. Show stack
+9. Show grid and status
+10. EMERGENCY STOP
+11. Release emergency stop
+12. Exit
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #1 added
+[front=0 rear=0 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #2 added
+[front=0 rear=1 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): S
+Request #3 added
+[front=0 rear=2 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 7
+Queue (front = 0, rear = 2):
+  slot 0: #1 MOVE E   <-- FRONT
+  slot 1: #2 MOVE E
+  slot 2: #3 MOVE S   <-- REAR
+[front=0 rear=2 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #1 MOVE E
+Moved to (1, 2)
+[front=1 rear=2 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #2 MOVE E
+Moved to (1, 3)
+[front=2 rear=2 top=1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #3 MOVE S
+BLOCKED: wall, obstacle or edge ahead. Chair did not move
+[front=-1 rear=-1 top=1 mode=BLOCKED]
+
+   (menu shown again)
+Enter your choice: 8
+Stack (top = 1):
+  slot 1: (1, 2) facing E   <-- TOP
+  slot 0: (1, 1) facing E
+[front=-1 rear=-1 top=1 mode=BLOCKED]
+
+   (menu shown again)
+Enter your choice: 2
+Request #4 added
+[front=0 rear=0 top=1 mode=BLOCKED]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #4 BACK
+Went back to (1, 2)
+[front=-1 rear=-1 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 3
+Request #5 added
+[front=0 rear=0 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #5 SENSE
+Clearance ahead: 300 cm
+[front=-1 rear=-1 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 9
+  ############
+  #SC........#
+  #..O.......#
+  #.....O....#
+  #......G...#
+  #...O......#
+  #..........#
+  ############
+  # wall  O obstacle  S start  G goal  C wheelchair
+Wheelchair at (1, 2) facing E, mode READY
+[front=-1 rear=-1 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 12
+Program terminated
