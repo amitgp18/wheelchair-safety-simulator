@@ -23,14 +23,14 @@ because the report should show your own run.
 
 ## C programs (take these yourself)
 
-- [ ] Compiling program 3 with no warnings (`gcc -Wall -Wextra -std=c99 ...`)
-- [ ] Program 1: push three positions, display, pop, then pop on an empty stack (STACK UNDERFLOW)
-- [ ] Program 1: sixth push with SIZE 5 (STACK OVERFLOW)
-- [ ] Program 2: queue full (Queue is Full) and the display after wraparound showing `front = 2, rear = 1`
-- [ ] Program 3: option 9 showing the grid, then a blocked move into the obstacle
-- [ ] Program 3: emergency stop with requests waiting (`2 pending request(s) removed`) and the release prompt
-- [ ] The C test run: `python3 lab-sheet/tests/labtests.py` ending in `35 passed, 0 failed`
+- [ ] Compiling the simulator with no warnings (`gcc -Wall -Wextra -std=c99 ...`)
+- [ ] Stack program: push three positions, display, pop, then pop on an empty stack (STACK UNDERFLOW)
+- [ ] Stack program: sixth push with SIZE 5 (STACK OVERFLOW)
+- [ ] Queue program: queue full (Queue is Full) and the display after wraparound showing `front = 2, rear = 1`
+- [ ] Simulator: option 9 showing the grid, then a blocked move into the obstacle
+- [ ] Simulator: emergency stop with requests waiting (`2 pending request(s) removed`) and the release prompt
+- [ ] The C test run: `python3 c-programs/tests/c-program-tests.py` ending in `35 passed, 0 failed`
 - [ ] The website logic tests: `node web/tests/run-node.js` ending in `76 passed, 0 failed`
 - [ ] The parity check: `python3 web/tests/parity.py` ending in `65 state checks, 0 mismatches`
 
-Tip: `lab-sheet/sample-output/` has the same sessions as text, if you want to compare with what you see.
+Tip: `c-programs/sample-output/` has the same sessions as text, if you want to compare with what you see.

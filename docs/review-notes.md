@@ -39,7 +39,7 @@ Nothing in the stack, queue, safety or simulation logic needed to change in this
 ## Checked and found correct
 
 - Stack starts at -1, push and pop correct, overflow and underflow leave the data unchanged (C and JS).
-- Queue front and rear conventions identical in C program 2, C program 3 and JavaScript; wraparound and last-element reset correct.
+- Queue front and rear conventions identical in the C queue program, the C simulator and JavaScript; wraparound and last-element reset correct.
 - Displayed sizes and indices always match the data (600 random clicks in the browser, 8000 random actions in logic).
 - Refused moves never enter the history; BACK always restores the top of the stack.
 - Emergency stop cannot be bypassed by queued commands; recovery needs confirmation and passing checks.

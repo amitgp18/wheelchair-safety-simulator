@@ -23,7 +23,7 @@ Fonts (IBM Plex, Barlow) load from Google Fonts when you are online. Offline, th
 
     node tests/run-node.js        76 logic tests (stack, queue, rules, scenarios, 8000 random actions)
     open tests.html               the same tests inside the browser
-    python3 tests/parity.py       compares this JavaScript with ../lab-sheet/program3-wheelchair-simulator.c (needs gcc and node)
+    python3 tests/parity.py       compares this JavaScript with ../c-programs/wheelchair-simulator.c (needs gcc and node)
     sh tests/mutation-check.sh    breaks the code 13 ways and confirms the tests notice
     node tests/browser-test.js    58 end-to-end checks in headless Chromium, saves screenshots to ../docs/screenshots
     node tests/final-audit.js     clicks every button on every view at 1280 px and 390 px; checks screen, state and log after each click

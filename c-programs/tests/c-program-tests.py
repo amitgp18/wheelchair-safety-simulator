@@ -1,8 +1,8 @@
-"""Scripted tests for the three lab-sheet programs. Feeds keystrokes through stdin and
+"""Scripted tests for the three C programs. Feeds keystrokes through stdin and
 checks the printed output. Prints one PASS/FAIL line per test.
 
-Usage:  python3 tests/labtests.py          (compiles the programs with gcc first)
-        python3 tests/labtests.py BINDIR   (uses programs already compiled in BINDIR)"""
+Usage:  python3 tests/c-program-tests.py          (compiles the programs with gcc first)
+        python3 tests/c-program-tests.py BINDIR   (uses programs already compiled in BINDIR)"""
 import os
 import subprocess
 import sys
@@ -13,7 +13,7 @@ if len(sys.argv) > 1:
     B = sys.argv[1]
 else:
     B = tempfile.mkdtemp()
-    for name in ("program1-stack", "program2-circular-queue", "program3-wheelchair-simulator"):
+    for name in ("wheelchair-history-stack", "request-circular-queue", "wheelchair-simulator"):
         subprocess.check_call(["gcc", "-Wall", "-Wextra", "-std=c99", "-o", os.path.join(B, name), os.path.join(HERE, name + ".c")])
 results = []
 
@@ -28,9 +28,9 @@ def check(name, cond):
     print(("PASS  " if cond else "FAIL  ") + name)
 
 
-S = "program1-stack"
-Q = "program2-circular-queue"
-W = "program3-wheelchair-simulator"
+S = "wheelchair-history-stack"
+Q = "request-circular-queue"
+W = "wheelchair-simulator"
 
 # ---------------- program 1: stack ----------------
 o = run(S, ["4", "2", "3", "5"])

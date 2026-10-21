@@ -9,7 +9,7 @@ out=docs/test-results.txt
   echo "node: $(node --version)"
   echo
   echo "== 0. Compiler warnings (gcc -Wall -Wextra -pedantic -std=c99, and clang if installed) =="
-  for f in lab-sheet/program1-stack.c lab-sheet/program2-circular-queue.c lab-sheet/program3-wheelchair-simulator.c; do
+  for f in c-programs/wheelchair-history-stack.c c-programs/request-circular-queue.c c-programs/wheelchair-simulator.c; do
     w=$(gcc -Wall -Wextra -pedantic -std=c99 -fsyntax-only "$f" 2>&1 | grep -c "warning\|error")
     echo "gcc   $f: $w warning(s)"
     if command -v clang >/dev/null 2>&1; then
@@ -18,8 +18,8 @@ out=docs/test-results.txt
     fi
   done
   echo
-  echo "== 1. C lab programs (lab-sheet/tests/labtests.py) =="
-  python3 lab-sheet/tests/labtests.py
+  echo "== 1. C programs (c-programs/tests/c-program-tests.py) =="
+  python3 c-programs/tests/c-program-tests.py
   echo
   echo "== 2. JavaScript logic (web/tests/run-node.js) =="
   node web/tests/run-node.js

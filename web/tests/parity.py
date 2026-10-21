@@ -4,7 +4,7 @@ Needs gcc and node. Usage: python3 tests/parity.py"""
 import json, os, re, subprocess, sys, tempfile
 
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-csrc = os.path.join(root, '..', 'lab-sheet', 'program3-wheelchair-simulator.c')
+csrc = os.path.join(root, '..', 'c-programs', 'wheelchair-simulator.c')
 tmp = tempfile.mkdtemp()
 binary = os.path.join(tmp, 'prog3')
 subprocess.check_call(['gcc', '-o', binary, csrc])

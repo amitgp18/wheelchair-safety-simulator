@@ -1,16 +1,16 @@
-Test run: Wed Oct 21 00:22:24 IST 2026
+Test run: Wed Oct 21 08:12:47 IST 2026
 gcc: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
 node: v22.22.0
 
 == 0. Compiler warnings (gcc -Wall -Wextra -pedantic -std=c99, and clang if installed) ==
-gcc   lab-sheet/program1-stack.c: 0 warning(s)
-clang lab-sheet/program1-stack.c: 0 warning(s)
-gcc   lab-sheet/program2-circular-queue.c: 0 warning(s)
-clang lab-sheet/program2-circular-queue.c: 0 warning(s)
-gcc   lab-sheet/program3-wheelchair-simulator.c: 0 warning(s)
-clang lab-sheet/program3-wheelchair-simulator.c: 0 warning(s)
+gcc   c-programs/wheelchair-history-stack.c: 0 warning(s)
+clang c-programs/wheelchair-history-stack.c: 0 warning(s)
+gcc   c-programs/request-circular-queue.c: 0 warning(s)
+clang c-programs/request-circular-queue.c: 0 warning(s)
+gcc   c-programs/wheelchair-simulator.c: 0 warning(s)
+clang c-programs/wheelchair-simulator.c: 0 warning(s)
 
-== 1. C lab programs (lab-sheet/tests/labtests.py) ==
+== 1. C programs (c-programs/tests/c-program-tests.py) ==
 PASS  P1 empty stack: display, pop and peek all report empty or underflow
 PASS  P1 one element: push, peek, display, pop, then empty again
 PASS  P1 stack overflow: the 6th push prints STACK OVERFLOW and the top stays (5, 5)
@@ -38,12 +38,12 @@ PASS  P3 sensor: clearance ahead from the start is 300 cm
 PASS  P3 emergency stop: 2 requests removed, new request refused, processing refused
 PASS  P3 emergency stop: stack kept (top = 0) and queue empty while stopped
 PASS  P3 release: answering 0 keeps ESTOP, answering 1 releases it, BACK then works
-PASS  program1-stack: a letter at the menu prints Invalid choice and the program carries on
-PASS  program2-circular-queue: a letter at the menu prints Invalid choice and the program carries on
-PASS  program3-wheelchair-simulator: a letter at the menu prints Invalid choice and the program carries on
-PASS  program1-stack: end of input stops the program instead of looping
-PASS  program2-circular-queue: end of input stops the program instead of looping
-PASS  program3-wheelchair-simulator: end of input stops the program instead of looping
+PASS  wheelchair-history-stack: a letter at the menu prints Invalid choice and the program carries on
+PASS  request-circular-queue: a letter at the menu prints Invalid choice and the program carries on
+PASS  wheelchair-simulator: a letter at the menu prints Invalid choice and the program carries on
+PASS  wheelchair-history-stack: end of input stops the program instead of looping
+PASS  request-circular-queue: end of input stops the program instead of looping
+PASS  wheelchair-simulator: end of input stops the program instead of looping
 PASS  P1: letters instead of a position are refused and nothing is pushed
 PASS  P3: answering yes instead of 1 does not release the emergency stop
 
@@ -216,7 +216,7 @@ PASS  no JavaScript errors in the console
 58 passed, 0 failed
 
 == 6. Final audit: every button, desktop and phone width (web/tests/final-audit.js) ==
-Total clicks: 872
+Total clicks: 868
 112 passed, 0 failed
 
 == 7. Demonstration rehearsal (web/tests/demo-rehearsal.js) ==

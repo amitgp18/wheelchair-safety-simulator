@@ -2,9 +2,9 @@
 *.exe
 *.o
 a.out
-lab-sheet/program1
-lab-sheet/program2
-lab-sheet/program3
+c-programs/wheelchair-history-stack
+c-programs/request-circular-queue
+c-programs/wheelchair-simulator
 
 # tools
 node_modules/

@@ -18,10 +18,10 @@ safety simulation, first as C console programs and then as a browser simulator.
 ```
             same rules, written twice
    ┌──────────────────────────┐     ┌──────────────────────────────────────────┐
-   │ C (lab-sheet/)            │     │ Browser (web/)                            │
-   │ program1  stack           │     │ structures.js  Stack, CircularQueue       │
-   │ program2  circular queue  │     │ safety.js      sensor, mode rules, checks │
-   │ program3  wheelchair sim  │     │ simulation.js  state, moves, log, trace   │
+   │ C (c-programs/)            │     │ Browser (web/)                            │
+   │ history stack (C)         │     │ structures.js  Stack, CircularQueue       │
+   │ request queue (C)         │     │ safety.js      sensor, mode rules, checks │
+   │ wheelchair simulator (C)  │     │ simulation.js  state, moves, log, trace   │
    │  (menu, printf)           │     │ ui.js          drawing and input only     │
    └────────────┬─────────────┘     └───────────────────┬──────────────────────┘
                 │      tests/parity.py compares          │
@@ -48,12 +48,12 @@ so every number on screen is read from the real queue and stack.
 wheelchair-sim/
 ├── README.md                 this file
 ├── run-all-tests.sh          runs every test and writes docs/test-results.txt
-├── lab-sheet/                the C programs to submit (lab-sheet style, one file each)
-│   ├── program1-stack.c
-│   ├── program2-circular-queue.c
-│   ├── program3-wheelchair-simulator.c
+├── c-programs/               the C programs to submit (lab style, one file each)
+│   ├── wheelchair-history-stack.c
+│   ├── request-circular-queue.c
+│   ├── wheelchair-simulator.c
 │   ├── sample-output/        real terminal sessions
-│   ├── tests/labtests.py     35 scripted tests for the three programs
+│   ├── tests/c-program-tests.py     35 scripted tests for the three programs
 │   └── README.md
 ├── web/                      the website
 │   ├── index.html  tests.html  README.md
@@ -78,12 +78,12 @@ wheelchair-sim/
 **C programs** (gcc or clang; on Windows use MinGW, MSYS2 or CodeTantra):
 
 ```
-cd lab-sheet
-gcc -Wall -Wextra -std=c99 -o program3 program3-wheelchair-simulator.c
-./program3                          (Windows: program3.exe)
+cd c-programs
+gcc -Wall -Wextra -std=c99 -o wheelchair-simulator wheelchair-simulator.c
+./wheelchair-simulator                          (Windows: wheelchair-simulator.exe)
 ```
 
-Programs 1 and 2 compile the same way. To run the C tests: `python3 tests/labtests.py` (needs Python 3 and gcc).
+Programs 1 and 2 compile the same way. To run the C tests: `python3 tests/c-program-tests.py` (needs Python 3 and gcc).
 
 **Website**: open `web/index.html` by double-clicking it. Nothing to install and no internet needed
 (fonts load from Google Fonts when online; offline the page uses system fonts).

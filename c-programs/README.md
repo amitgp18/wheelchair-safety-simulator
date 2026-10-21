@@ -1,26 +1,26 @@
-# C programs (lab-sheet style)
+# C programs (lab style)
 
 | File | What it is |
 |---|---|
-| program1-stack.c | Array stack of wheelchair positions (SIZE 5): push, pop, peek, display |
-| program2-circular-queue.c | Circular queue of move requests N, E, S, W (MAX 5): enqueue, dequeue, peek, display |
-| program3-wheelchair-simulator.c | The project: 8 x 12 room, queue of requests (8), history stack (10), obstacles, sensor, emergency stop |
+| wheelchair-history-stack.c | Array stack of wheelchair positions (SIZE 5): push, pop, peek, display |
+| request-circular-queue.c | Circular queue of move requests N, E, S, W (MAX 5): enqueue, dequeue, peek, display |
+| wheelchair-simulator.c | The project: 8 x 12 room, queue of requests (8), history stack (10), obstacles, sensor, emergency stop |
 | sample-output/ | Real sessions of each program |
-| tests/labtests.py | 35 scripted tests |
+| tests/c-program-tests.py | 35 scripted tests |
 
 ## Compile and run
 
 ```
-gcc -Wall -Wextra -std=c99 -o program3 program3-wheelchair-simulator.c
-./program3
+gcc -Wall -Wextra -std=c99 -o wheelchair-simulator wheelchair-simulator.c
+./wheelchair-simulator
 ```
 
-On Windows: `program3.exe`. In CodeTantra, paste one file and run it.
+On Windows: `wheelchair-simulator.exe`. In CodeTantra, paste one file and run it.
 
 ## Test
 
 ```
-python3 tests/labtests.py
+python3 tests/c-program-tests.py
 ```
 
 It compiles the three programs with gcc, types menu choices into them and checks what they print.

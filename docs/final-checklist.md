@@ -9,14 +9,14 @@ The website runs JavaScript copies of the stack and circular queue; it does not 
 
 ## 1. Verified and working (each item was run)
 
-### C programs (`lab-sheet/`)
+### C programs (`c-programs/`)
 
 - [x] All three programs compile with **0 warnings** under `gcc -Wall -Wextra -pedantic -std=c99` and `clang -Wall -Wextra -std=c99`.
-- [x] **35 of 35** scripted tests pass (`lab-sheet/tests/labtests.py`): empty, one element, overflow, underflow, wraparound,
+- [x] **35 of 35** scripted tests pass (`c-programs/tests/c-program-tests.py`): empty, one element, overflow, underflow, wraparound,
   removing the last element, repeated insert and remove, obstacle, emergency stop and release, and wrong input.
 - [x] A letter or the end of the input at any prompt no longer hangs a program (it used to loop forever).
-- [x] Typed by hand: program 3 demonstration sequence gives exactly the output in [demo-script.md](demo-script.md);
-  program 1 gives `STACK OVERFLOW` on the 6th push, pops come back last in first out, then `STACK UNDERFLOW`.
+- [x] Typed by hand: the simulator demonstration sequence gives exactly the output in [demo-script.md](demo-script.md);
+  the stack program gives `STACK OVERFLOW` on the 6th push, pops come back last in first out, then `STACK UNDERFLOW`.
 
 ### Website logic (`web/js/`)
 
@@ -35,7 +35,7 @@ The website runs JavaScript copies of the stack and circular queue; it does not 
 
 ### C and JavaScript agree
 
-- [x] `web/tests/parity.py` feeds the same commands to the compiled C program 3 and to the JavaScript simulation:
+- [x] `web/tests/parity.py` feeds the same commands to the compiled the C simulator and to the JavaScript simulation:
   **65 states compared, 0 differences** (front, rear, top, position, heading, mode after every command).
   The sensor-failure scenario is not part of this, because the C program has no sensor failure.
 

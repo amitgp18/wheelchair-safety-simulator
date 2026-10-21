@@ -9,14 +9,14 @@ To repeat everything: `sh run-all-tests.sh` from the project folder.
 
 | Suite | What it checks | Result |
 |---|---|---|
-| C lab programs (`lab-sheet/tests/labtests.py`) | The three C programs, driven through their menus | **35 passed, 0 failed** |
+| C lab programs (`c-programs/tests/c-program-tests.py`) | The three C programs, driven through their menus | **35 passed, 0 failed** |
 | JavaScript logic (`web/tests/run-node.js`) | Stack, queue, simulation rules, scenarios, 8000 random actions | **76 passed, 0 failed** |
-| Parity (`web/tests/parity.py`) | C program 3 and the JavaScript give the same front, rear, top, position, heading and mode after every command | **65 states compared, 0 differences** |
+| Parity (`web/tests/parity.py`) | the C simulator and the JavaScript give the same front, rear, top, position, heading and mode after every command | **65 states compared, 0 differences** |
 | Mutation check (`web/tests/mutation-check.sh`) | The code is broken 13 ways on purpose; the tests must notice each one | **13 of 13 caught** |
 | Browser end-to-end (`web/tests/browser-test.js`) | Real clicks and keys in headless Chromium; screen compared with state | **58 passed, 0 failed** |
 | Final audit (`web/tests/final-audit.js`) | Every visible button on all 8 views, 3 rounds, at 1280 px and 390 px (872 clicks). After each click: screen, state and event log agree; also icons, names, placeholder text, sideways scrolling, active tab, console errors | **112 passed, 0 failed** |
 | Demonstration rehearsal (`web/tests/demo-rehearsal.js`) | The website half of the teacher demonstration, click for click | **23 passed, 0 failed** |
-| Sample outputs | The 7 saved sessions in `lab-sheet/sample-output/` replayed on the C code during the earlier review pass | 7 of 7 identical (not part of `run-all-tests.sh`; not repeated in the final pass) |
+| Sample outputs | The 7 saved sessions in `c-programs/sample-output/` replayed on the C code during the earlier review pass | 7 of 7 identical (not part of `run-all-tests.sh`; not repeated in the final pass) |
 | Compiler warnings (in `run-all-tests.sh`) | `gcc -Wall -Wextra -pedantic -std=c99` and `clang -Wall -Wextra -std=c99` on all three programs | **0 warnings** |
 | Earlier `c-core` version (reference) | Its own test file | 126 passed, 0 failed |
 
@@ -71,4 +71,4 @@ recovery skips the checks, recovery without confirmation.
 - **Other browsers.** Only Chromium was tested automatically. Firefox, Safari and phone browsers were not tested. The page needs a browser from 2023 or later (it uses CSS `color-mix`).
 - **Larger screens.** Tested at 1280 px and 390 px only.
 - **Screen readers.** Labels and live announcements are in place, but no screen reader was used to check them.
-- **The sensor-failure scenario against C.** C program 3 has no sensor failure, so that scenario is compared only inside JavaScript.
+- **The sensor-failure scenario against C.** the C simulator has no sensor failure, so that scenario is compared only inside JavaScript.

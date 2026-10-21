@@ -4,10 +4,10 @@ Both are fixed-size arrays with index variables. There is no linked list and no 
 The C programs and the JavaScript use **the same conventions**, listed here. They are separate code:
 the browser runs the JavaScript version, not the C program.
 
-| | C (`lab-sheet/`) | JavaScript (`web/js/structures.js`) |
+| | C (`c-programs/`) | JavaScript (`web/js/structures.js`) |
 |---|---|---|
-| Stack size | `SIZE 5` (program 1), `STACKSIZE 10` (program 3) | `STACKCAP 10` |
-| Queue size | `MAX 5` (program 2), `QSIZE 8` (program 3) | `QCAP 8` |
+| Stack size | `SIZE 5` (stack program), `STACKSIZE 10` (simulator) | `STACKCAP 10` |
+| Queue size | `MAX 5` (queue program), `QSIZE 8` (simulator) | `QCAP 8` |
 | Stack empty | `top == -1` | `top === -1` |
 | Stack full | `top == SIZE - 1` | `top === capacity - 1` |
 | Queue empty | `front == -1` (and `rear == -1`) | same |
@@ -87,10 +87,10 @@ Displaying everything is O(n). Memory is fixed: one array per structure.
 
 - **Clearing slots.** C leaves the old value in a slot after pop or dequeue (it is simply outside the used range).
   JavaScript sets it to `null` so the picture on screen shows the slot as empty. The indices behave the same.
-- **Messages.** The C functions print their own messages, lab-sheet style. The JavaScript structures never touch the page;
+- **Messages.** The C functions print their own messages, lab style. The JavaScript structures never touch the page;
   they return a result and the simulation writes the log.
 - **Extra features in the browser only.** Battery, sensor failure, obstacle editing, the recovery checklist and the
-  scenario commands exist only in the website. The C program 3 has the same stack, queue, obstacle and boundary rules,
+  scenario commands exist only in the website. The C simulator has the same stack, queue, obstacle and boundary rules,
   sensor distance and emergency stop.
 - **The earlier `c-core/` version** used a different queue convention (`front = 0`, `rear = -1` and a separate `count`).
   It is kept for reference only. The submitted programs and the website both use the lab convention above.

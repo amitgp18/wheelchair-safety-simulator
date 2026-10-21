@@ -1,6 +1,6 @@
 # Teacher demonstration (about 4 minutes)
 
-Every step below was run for real before it was written down. The C steps were typed into the compiled `program3`.
+Every step below was run for real before it was written down. The C steps were typed into the compiled `wheelchair-simulator`.
 The website steps are performed, click for click, by `web/tests/demo-rehearsal.js` (23 checks, all passed).
 The times are a suggested pace for talking, not measured; the clicks themselves take seconds.
 
@@ -10,13 +10,13 @@ Every place the chair leaves is saved on a stack, so BACK can retrace the path. 
 
 ## Before you start (do this once, 1 minute)
 
-- [ ] Compile: `cd lab-sheet` then `gcc -Wall -Wextra -std=c99 -o program3 program3-wheelchair-simulator.c`
+- [ ] Compile: `cd c-programs` then `gcc -Wall -Wextra -std=c99 -o wheelchair-simulator wheelchair-simulator.c`
 - [ ] Open `web/index.html` in Chrome or Edge. Leave the page on the Dashboard.
-- [ ] Have `lab-sheet/sample-output/` open in a folder window in case the live C run fails.
+- [ ] Have `c-programs/sample-output/` open in a folder window in case the live C run fails.
 
 ## Part A: the C program (about 1 minute 45 seconds)
 
-Run `./program3`. Type each line below and press Enter.
+Run `./wheelchair-simulator`. Type each line below and press Enter.
 
 | Step | You type | What appears (real output) | What to say |
 |---|---|---|---|
@@ -54,7 +54,7 @@ Open `web/index.html`.
 
 | Problem | What to do |
 |---|---|
-| The C program does not compile on the lab machine | Show `lab-sheet/sample-output/program3-output-a.txt`, which is a real session, and say so |
+| The C program does not compile on the lab machine | Show `c-programs/sample-output/simulator-output-a.txt`, which is a real session, and say so |
 | You pressed the wrong button on the website | Press **Reset** on the Simulator tab. Reload the page if needed: it always starts clean |
 | A fixed scenario is running and you want to stop | Press **Stop** on its card, or **Reset** |
 | The page looks wrong | Use Chrome or Edge. Very old browsers are not supported |
@@ -63,6 +63,6 @@ Open `web/index.html`.
 
 ## Extra short demonstrations, if asked
 
-- **Stack overflow (C program 1):** push 5 positions (SIZE is 5), push a 6th: `STACK OVERFLOW`. Pop six times: five positions come back last in first out, then `STACK UNDERFLOW. No position to pop`.
-- **Wraparound in C (program 2):** `lab-sheet/sample-output/program2-output-b.txt` shows `Queue is Full`. The test `P2 wraparound` shows rear going 4 to 0 to 1 with order S W N E S.
+- **Stack overflow (C stack program):** push 5 positions (SIZE is 5), push a 6th: `STACK OVERFLOW`. Pop six times: five positions come back last in first out, then `STACK UNDERFLOW. No position to pop`.
+- **Wraparound in C (queue program):** `c-programs/sample-output/queue-output-b.txt` shows `Queue is Full`. The test `P2 wraparound` shows rear going 4 to 0 to 1 with order S W N E S.
 - **Scenario lab:** each of the six scenarios replays a fixed command list and gives the same result every time. They take 8 to 14 seconds each, so use them only if there is time.

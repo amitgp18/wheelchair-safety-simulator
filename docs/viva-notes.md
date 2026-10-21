@@ -1,6 +1,6 @@
 # Viva notes
 
-Short answers in plain words. The code examples are from `lab-sheet/`.
+Short answers in plain words. The code examples are from `c-programs/`.
 
 ## The project in two sentences
 
@@ -90,13 +90,13 @@ whatever the number of items. Displaying every item is **O(n)**. The memory is f
 
 | Used in | What | Meaning |
 |---|---|---|
-| program 3 | `struct Position`, `struct Event` | Groups related values: row, column, heading; id, type, direction |
-| program 3 | `char grid[8][13]` | A 2D array: `grid[r][c]` is row r, column c. Each row is a string, so 13 chars for 12 cells plus the end mark |
-| program 3 | `\|\|`, `&&`, `!` | or, and, not |
+| simulator | `struct Position`, `struct Event` | Groups related values: row, column, heading; id, type, direction |
+| simulator | `char grid[8][13]` | A 2D array: `grid[r][c]` is row r, column c. Each row is a string, so 13 chars for 12 cells plus the end mark |
+| simulator | `\|\|`, `&&`, `!` | or, and, not |
 | all three | `if (scanf(...) != 1)` | scanf returns how many values it read; not 1 means the input was not a number |
 | all three | `clearInput()` with `getchar()` | Throws away the rest of a wrong line so the next prompt works |
 | all three | `feof(stdin)` and `EOF` | True when there is no more input at all; the program stops instead of looping |
-| program 2, 3 | `scanf(" %c", ...)` | The space skips the Enter key left from the previous input |
+| queue, simulator | `scanf(" %c", ...)` | The space skips the Enter key left from the previous input |
 
 ## Honest answers to tricky questions
 
