@@ -171,6 +171,7 @@ They are **two separate implementations of the same rules.** There is no bridge 
 ```
 wheelchair-sim/
 ├── README.md                          this file
+├── index.html                         forwards to web/index.html so GitHub Pages can publish the website
 ├── run-all-tests.sh                   runs every test and updates the results in docs/test-report.md
 ├── c-programs/
 │   ├── wheelchair-history-stack.c     array stack of positions: push, pop, peek, display (SIZE 5)
@@ -209,6 +210,8 @@ gcc -Wall -Wextra -std=c99 -o wheelchair-simulator wheelchair-simulator.c
 The other two programs compile the same way: `wheelchair-history-stack.c` and `request-circular-queue.c`. Directions are typed as capital letters N, E, S, W. Menu option numbers are printed on screen.
 
 **Website:** double-click `web/index.html`. Nothing to install and no internet needed. It needs a recent browser (it was tested in Chromium, which Chrome and Edge use). If your browser blocks something when opened as a file, run `python3 -m http.server 8000` inside `web/` and open http://localhost:8000.
+
+**Website online (GitHub Pages):** in the repository on github.com open **Settings, Pages**, choose branch **main** and folder **/ (root)**, and save. After a minute or two GitHub shows a link such as `https://YOUR-USERNAME.github.io/wheelchair-safety-simulator/`. This publishes the website only; the C programs cannot run there.
 
 **Tests:** see the next section.
 
