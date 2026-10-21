@@ -1,7 +1,6 @@
 /* tests.js
    Logic tests for the stack, the circular queue, the simulation and the scenarios.
-   They need no page, so the same file runs in a terminal (node tests/run-node.js)
-   and in the browser (tests.html). */
+   They need no page. Run them in a terminal:  node tests/unit-tests.js */
 (function () {
   'use strict';
   var WC = (globalThis.WC = globalThis.WC || {});
@@ -319,3 +318,22 @@
     return results;
   };
 })();
+
+/* Terminal runner. Only active when this file is started with node; the code above does not need it. */
+if (typeof require !== 'undefined' && typeof module !== 'undefined' && require.main === module) {
+  var vm = require('vm');
+  var fs = require('fs');
+  var path = require('path');
+  var root = path.join(__dirname, '..');
+  ['js/config.js', 'js/structures.js', 'js/safety.js', 'js/simulation.js', 'js/scenarios.js'].forEach(function (f) {
+    vm.runInThisContext(fs.readFileSync(path.join(root, f), 'utf8'), { filename: f });
+  });
+  var results = globalThis.WC.runTests();
+  var failed = 0;
+  results.forEach(function (r) {
+    if (!r.pass) { failed++; }
+    console.log((r.pass ? 'PASS  ' : 'FAIL  ') + r.name);
+  });
+  console.log('\n' + (results.length - failed) + ' passed, ' + failed + ' failed');
+  process.exit(failed ? 1 : 0);
+}

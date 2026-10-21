@@ -1,0 +1,609 @@
+Real terminal sessions of the three C programs, recorded from the compiled programs.
+Each session starts with the menu the program prints. Sections are separated by lines of equals signs.
+
+======================================================================
+Stack program, session A
+======================================================================
+
+--- Stack of Wheelchair Positions ---
+1. Push
+2. Pop
+3. Peek
+4. Display
+5. Exit
+Choice: 1
+Enter row and column: 1 1
+Pushed (1, 1)
+
+   (menu shown again)
+Choice: 1
+Enter row and column: 1 2
+Pushed (1, 2)
+
+   (menu shown again)
+Choice: 1
+Enter row and column: 1 3
+Pushed (1, 3)
+
+   (menu shown again)
+Choice: 4
+Positions in the stack (top = 2):
+(1, 3)
+(1, 2)
+(1, 1)
+
+   (menu shown again)
+Choice: 3
+Top position is (1, 3)
+
+   (menu shown again)
+Choice: 2
+Popped (1, 3)
+
+   (menu shown again)
+Choice: 4
+Positions in the stack (top = 1):
+(1, 2)
+(1, 1)
+
+   (menu shown again)
+Choice: 5
+Program terminated
+
+======================================================================
+Stack program, session B
+======================================================================
+
+--- Stack of Wheelchair Positions ---
+1. Push
+2. Pop
+3. Peek
+4. Display
+5. Exit
+Choice: 1
+Enter row and column: 1 1
+Pushed (1, 1)
+
+   (menu shown again)
+Choice: 1
+Enter row and column: 1 2
+Pushed (1, 2)
+
+   (menu shown again)
+Choice: 1
+Enter row and column: 1 3
+Pushed (1, 3)
+
+   (menu shown again)
+Choice: 1
+Enter row and column: 2 1
+Pushed (2, 1)
+
+   (menu shown again)
+Choice: 1
+Enter row and column: 2 2
+Pushed (2, 2)
+
+   (menu shown again)
+Choice: 1
+STACK OVERFLOW
+
+   (menu shown again)
+Choice: 4
+Positions in the stack (top = 4):
+(2, 2)
+(2, 1)
+(1, 3)
+(1, 2)
+(1, 1)
+
+   (menu shown again)
+Choice: 2
+Popped (2, 2)
+
+   (menu shown again)
+Choice: 2
+Popped (2, 1)
+
+   (menu shown again)
+Choice: 2
+Popped (1, 3)
+
+   (menu shown again)
+Choice: 2
+Popped (1, 2)
+
+   (menu shown again)
+Choice: 2
+Popped (1, 1)
+
+   (menu shown again)
+Choice: 2
+STACK UNDERFLOW. No position to pop
+
+   (menu shown again)
+Choice: 5
+Program terminated
+
+======================================================================
+Queue program, session A
+======================================================================
+
+--- Circular Queue of Move Requests ---
+1. Enqueue
+2. Dequeue
+3. Peek
+4. Display
+5. Exit
+Enter your choice: 1
+Enter move (N, E, S or W): N
+N inserted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Enter move (N, E, S or W): E
+E inserted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Enter move (N, E, S or W): S
+S inserted successfully
+
+   (menu shown again)
+Enter your choice: 4
+Queue elements: N E S 
+front = 0, rear = 2
+
+   (menu shown again)
+Enter your choice: 3
+Front move is N
+
+   (menu shown again)
+Enter your choice: 2
+N deleted successfully
+
+   (menu shown again)
+Enter your choice: 4
+Queue elements: E S 
+front = 1, rear = 2
+
+   (menu shown again)
+Enter your choice: 5
+Program terminated
+
+======================================================================
+Queue program, session B (queue full)
+======================================================================
+
+--- Circular Queue of Move Requests ---
+1. Enqueue
+2. Dequeue
+3. Peek
+4. Display
+5. Exit
+Enter your choice: 1
+Enter move (N, E, S or W): N
+N inserted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Enter move (N, E, S or W): E
+E inserted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Enter move (N, E, S or W): S
+S inserted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Enter move (N, E, S or W): W
+W inserted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Enter move (N, E, S or W): N
+N inserted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Queue is Full
+
+   (menu shown again)
+Enter your choice: 4
+Queue elements: N E S W N 
+front = 0, rear = 4
+
+   (menu shown again)
+Enter your choice: 2
+N deleted successfully
+
+   (menu shown again)
+Enter your choice: 2
+E deleted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Enter move (N, E, S or W): E
+E inserted successfully
+
+   (menu shown again)
+Enter your choice: 1
+Enter move (N, E, S or W): S
+S inserted successfully
+
+   (menu shown again)
+Enter your choice: 4
+Queue elements: S W N E S 
+front = 2, rear = 1
+
+   (menu shown again)
+Enter your choice: 2
+S deleted successfully
+
+   (menu shown again)
+Enter your choice: 2
+W deleted successfully
+
+   (menu shown again)
+Enter your choice: 2
+N deleted successfully
+
+   (menu shown again)
+Enter your choice: 2
+E deleted successfully
+
+   (menu shown again)
+Enter your choice: 2
+S deleted successfully
+
+   (menu shown again)
+Enter your choice: 2
+Queue is Empty
+
+   (menu shown again)
+Enter your choice: 5
+Program terminated
+
+======================================================================
+Simulator, session A
+======================================================================
+Smart Assistive Wheelchair Simulator
+Software simulation only. Not connected to a real wheelchair
+
+1. Add MOVE request
+2. Add BACK request
+3. Add SENSE request
+4. Process next request
+5. Peek front of queue
+6. Peek top of stack
+7. Show queue
+8. Show stack
+9. Show grid and status
+10. EMERGENCY STOP
+11. Release emergency stop
+12. Exit
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #1 added
+[front=0 rear=0 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #2 added
+[front=0 rear=1 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): S
+Request #3 added
+[front=0 rear=2 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 7
+Queue (front = 0, rear = 2):
+  slot 0: #1 MOVE E   <-- FRONT
+  slot 1: #2 MOVE E
+  slot 2: #3 MOVE S   <-- REAR
+[front=0 rear=2 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #1 MOVE E
+Moved to (1, 2)
+[front=1 rear=2 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #2 MOVE E
+Moved to (1, 3)
+[front=2 rear=2 top=1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #3 MOVE S
+BLOCKED: wall, obstacle or edge ahead. Chair did not move
+[front=-1 rear=-1 top=1 mode=BLOCKED]
+
+   (menu shown again)
+Enter your choice: 8
+Stack (top = 1):
+  slot 1: (1, 2) facing E   <-- TOP
+  slot 0: (1, 1) facing E
+[front=-1 rear=-1 top=1 mode=BLOCKED]
+
+   (menu shown again)
+Enter your choice: 2
+Request #4 added
+[front=0 rear=0 top=1 mode=BLOCKED]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #4 BACK
+Went back to (1, 2)
+[front=-1 rear=-1 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 3
+Request #5 added
+[front=0 rear=0 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #5 SENSE
+Clearance ahead: 300 cm
+[front=-1 rear=-1 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 9
+  ############
+  #SC........#
+  #..O.......#
+  #.....O....#
+  #......G...#
+  #...O......#
+  #..........#
+  ############
+  # wall  O obstacle  S start  G goal  C wheelchair
+Wheelchair at (1, 2) facing E, mode READY
+[front=-1 rear=-1 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 12
+Program terminated
+
+======================================================================
+Simulator, session B
+======================================================================
+Smart Assistive Wheelchair Simulator
+Software simulation only. Not connected to a real wheelchair
+
+1. Add MOVE request
+2. Add BACK request
+3. Add SENSE request
+4. Process next request
+5. Peek front of queue
+6. Peek top of stack
+7. Show queue
+8. Show stack
+9. Show grid and status
+10. EMERGENCY STOP
+11. Release emergency stop
+12. Exit
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #1 added
+[front=0 rear=0 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #2 added
+[front=0 rear=1 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #3 added
+[front=0 rear=2 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #4 added
+[front=0 rear=3 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #5 added
+[front=0 rear=4 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #6 added
+[front=0 rear=5 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #7 added
+[front=0 rear=6 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #8 added
+[front=0 rear=7 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+QUEUE OVERFLOW: queue is full
+[front=0 rear=7 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 7
+Queue (front = 0, rear = 7):
+  slot 0: #1 MOVE E   <-- FRONT
+  slot 1: #2 MOVE E
+  slot 2: #3 MOVE E
+  slot 3: #4 MOVE E
+  slot 4: #5 MOVE E
+  slot 5: #6 MOVE E
+  slot 6: #7 MOVE E
+  slot 7: #8 MOVE E   <-- REAR
+[front=0 rear=7 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #1 MOVE E
+Moved to (1, 2)
+[front=1 rear=7 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #2 MOVE E
+Moved to (1, 3)
+[front=2 rear=7 top=1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #3 MOVE E
+Moved to (1, 4)
+[front=3 rear=7 top=2 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): W
+Request #9 added
+[front=3 rear=0 top=2 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): W
+Request #10 added
+[front=3 rear=1 top=2 mode=READY]
+
+   (menu shown again)
+Enter your choice: 7
+Queue (front = 3, rear = 1):
+  slot 3: #4 MOVE E   <-- FRONT
+  slot 4: #5 MOVE E
+  slot 5: #6 MOVE E
+  slot 6: #7 MOVE E
+  slot 7: #8 MOVE E
+  slot 0: #9 MOVE W
+  slot 1: #10 MOVE W   <-- REAR
+[front=3 rear=1 top=2 mode=READY]
+
+   (menu shown again)
+Enter your choice: 12
+Program terminated
+
+======================================================================
+Simulator, session C
+======================================================================
+Smart Assistive Wheelchair Simulator
+Software simulation only. Not connected to a real wheelchair
+
+1. Add MOVE request
+2. Add BACK request
+3. Add SENSE request
+4. Process next request
+5. Peek front of queue
+6. Peek top of stack
+7. Show queue
+8. Show stack
+9. Show grid and status
+10. EMERGENCY STOP
+11. Release emergency stop
+12. Exit
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #1 added
+[front=0 rear=0 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #2 added
+[front=0 rear=1 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): E
+Request #3 added
+[front=0 rear=2 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #1 MOVE E
+Moved to (1, 2)
+[front=1 rear=2 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 10
+EMERGENCY STOP. 2 pending request(s) removed
+The stack is kept, so BACK still works after release
+[front=-1 rear=-1 top=0 mode=ESTOP]
+
+   (menu shown again)
+Enter your choice: 1
+Enter direction (N, E, S or W): N
+REFUSED: emergency stop is on
+[front=-1 rear=-1 top=0 mode=ESTOP]
+
+   (menu shown again)
+Enter your choice: 4
+EMERGENCY STOP is on. Nothing processed
+[front=-1 rear=-1 top=0 mode=ESTOP]
+
+   (menu shown again)
+Enter your choice: 8
+Stack (top = 0):
+  slot 0: (1, 1) facing E   <-- TOP
+[front=-1 rear=-1 top=0 mode=ESTOP]
+
+   (menu shown again)
+Enter your choice: 11
+Enter 1 to confirm release: 0
+Not released
+[front=-1 rear=-1 top=0 mode=ESTOP]
+
+   (menu shown again)
+Enter your choice: 11
+Enter 1 to confirm release: 1
+Emergency stop released
+[front=-1 rear=-1 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 2
+Request #4 added
+[front=0 rear=0 top=0 mode=READY]
+
+   (menu shown again)
+Enter your choice: 4
+Processing #4 BACK
+Went back to (1, 1)
+[front=-1 rear=-1 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 9
+  ############
+  #C.........#
+  #..O.......#
+  #.....O....#
+  #......G...#
+  #...O......#
+  #..........#
+  ############
+  # wall  O obstacle  S start  G goal  C wheelchair
+Wheelchair at (1, 1) facing E, mode READY
+[front=-1 rear=-1 top=-1 mode=READY]
+
+   (menu shown again)
+Enter your choice: 12
+Program terminated

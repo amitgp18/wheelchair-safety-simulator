@@ -8,7 +8,7 @@ try() {
   cp -r js tests "$tmp"/
   sed -i "$expr" "$tmp/$file"
   if cmp -s "$file" "$tmp/$file"; then echo "SKIP  $name (pattern not found)"; rm -rf "$tmp"; return; fi
-  fails=$(cd "$tmp" && timeout 30 node tests/run-node.js 2>&1 | grep -c '^FAIL')
+  fails=$(cd "$tmp" && timeout 30 node tests/unit-tests.js 2>&1 | grep -c '^FAIL')
   if [ "$fails" -gt 0 ]; then echo "CAUGHT  $name ($fails failing tests)"; else echo "MISSED  $name"; fi
   rm -rf "$tmp"
 }
